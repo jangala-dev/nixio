@@ -6,7 +6,7 @@ else
 include standalone.mk
 endif
 
-NIXIO_TLS    ?= openssl
+# NIXIO_TLS    ?= openssl
 NIXIO_SO      = nixio.so
 NIXIO_LDFLAGS =
 
