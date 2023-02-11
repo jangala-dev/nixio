@@ -1,21 +1,11 @@
-NIXIO
-=====
+# Nixio
 
-This Git repository is a fork of the [NIXIO code from the LuCI project](http://luci.subsignal.org/).  I created this fork to make it easier to track my changes & fixes.
+This Git repository is a light fork of the [Nixio](https://github.com/Neopallium/nixio) library by Neopallium. This code will build using GCC 10 and has TLS support disabled to ensure that it builds in the presence of the latest OpenSSL. 
 
-Building:
----------
+## Building
 
-	Use GNU Make.
-	make or gmake depending on your system.
-	
-	Special make flags:
-
-	OS		Override Target OS	[Linux|FreeBSD|SunOS|Windows]
-	NIXIO_TLS	TLS-Library		[*openssl|axtls]
-	NIXIO_CROSS_CC	MinGW CC (Windows)	`which i586-mingw32msvc-cc`
-	LUA_CFLAGS	Lua CFLAGS		`pkg-config --cflags lua5.1`
-	LUA_TARGET	Lua compile		target	[*source|strip|compile]
-	LUA_MODULEDIR	Install LUA_PATH	"/usr/share/lua/5.1"
-	LUA_LIBRARYDIR	Install LUA_CPATH	"/usr/lib/lua/5.1"
-
+```
+git clone https://github.com/jangala-dev/nixio
+cd nixio
+sudo luarocks make
+```
